@@ -1,0 +1,5 @@
+<map id="ExecProgram" name="ExecProgram">
+<area shape="rect" id="node2" href="$classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542" title="Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej LibInt..." alt="" coords="187,5,354,32"/>
+<area shape="rect" id="node3" href="$classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c" title="Wyświetla postać bieżącego polecenia (nazwę oraz wartości parametrów). " alt="" coords="170,56,371,83"/>
+<area shape="rect" id="node4" href="$classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8" title="Czyta wartości parametrów danego polecenia. " alt="" coords="160,107,381,133"/>
+</map>

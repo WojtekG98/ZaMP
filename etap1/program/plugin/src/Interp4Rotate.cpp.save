@@ -1,0 +1,100 @@
+#include <iostream>
+#include "Interp4Rotate.hh"
+#include "MobileObj.hh"
+
+using std::cout;
+using std::endl;
+
+
+extern "C" {
+ Interp4Command* CreateCmd(void);
+  const char* GetCmdName() { return "Rotate"; }
+}
+
+
+
+
+/*!
+ * \brief
+ *
+ *
+ */
+Interp4Command* CreateCmd(void)
+{
+  return Interp4Rotate::CreateCmd();
+}
+
+
+/*!
+ *
+ */
+Interp4Rotate::Interp4Rotate(): _AngSpeed_degS(0), _deg_deg(0)
+{}
+
+
+/*!
+ *
+ */
+void Interp4Rotate::PrintCmd() const
+{
+  cout << GetCmdName() << " " << _AngSpeed_degS  << " " << _deg_deg  << endl;
+}
+
+
+/*!
+ *
+ */
+const char* Interp4Rotate::GetCmdName() const
+{
+  return ::GetCmdName();
+}
+
+
+/*!
+ *
+ */
+bool Interp4Rotate::ExecCmd( MobileObj  *pMobObj,  int  Socket) const
+{
+  /*
+   *  Tu trzeba napisać odpowiedni kod.
+   */
+  return true;
+}
+
+
+/*!
+ *
+ */
+bool
+ Interp4Rotate::ReadParams(std::istream& Strm_CmdsList)
+{
+  std::string line;
+  std::string::size_type sz;
+  if (!getline(Strm_CmdsList,line,' '))
+        return false;
+  _AngSpeed_degS = std::stod(line,&sz);
+  if (!getline(Strm_CmdsList,line,' '))
+        return false;
+  _deg_deg = std::stod(line,&sz);
+  */
+  Strm_CmdsList >> _AngSpeed_degS >> _deg_deg;
+  return true;
+}
+
+
+/*!
+ *
+ */
+Interp4Command* Interp4Rotate::CreateCmd()
+{
+  return new Interp4Rotate();
+}
+
+
+/*!
+ *
+ */
+void Interp4Rotate::PrintSyntax() const
+{
+  cout << "   Rotate  NazwaObiektu  SzybkoscKatowa[deg/s]  KatObrotu[deg]" << endl;
+}

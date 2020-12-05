@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Interpreter: Plik źródłowy LibInterface.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Interpreter
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('LibInterface_8hh_source.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">LibInterface.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="LibInterface_8hh.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef  LIBINTERFACE_HH</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define  LIBINTERFACE_HH</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Interp4Command_8hh.html">Interp4Command.hh</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classLibInterface.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLibInterface.html">LibInterface</a>{</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classLibInterface.html#a7da8e08595488f780795d29b3840fdcf">   23</a></span>&#160;  std::string <a class="code" href="classLibInterface.html#a7da8e08595488f780795d29b3840fdcf">_CmdName</a>;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classLibInterface.html#a27724b7f22a96b4c04cf143b53c3063d">   27</a></span>&#160;  <span class="keywordtype">void</span> *<a class="code" href="classLibInterface.html#a27724b7f22a96b4c04cf143b53c3063d">_LibHandler</a>;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classLibInterface.html#a027eac6766c339b86ad2a4b884e604f5">   31</a></span>&#160;  <a class="code" href="classInterp4Command.html">Interp4Command</a> *(*_pCreateCmd)(void);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classLibInterface.html#aee1190d52de3a1508c9a410c0b2c80d4">   36</a></span>&#160; std::string <a class="code" href="classLibInterface.html#aee1190d52de3a1508c9a410c0b2c80d4">GetCmdName</a>(){<span class="keywordflow">return</span> <a class="code" href="classLibInterface.html#a7da8e08595488f780795d29b3840fdcf">_CmdName</a>;}</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classLibInterface.html#a2cdb1a808a17458370917686b0bae722">   40</a></span>&#160;  <a class="code" href="classInterp4Command.html">Interp4Command</a> *<a class="code" href="classLibInterface.html#a2cdb1a808a17458370917686b0bae722">CreateCmd</a>() { <span class="keywordflow">return</span> <a class="code" href="classLibInterface.html#a027eac6766c339b86ad2a4b884e604f5">_pCreateCmd</a>();}</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  </div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classLibInterface.html#a9db717a7c50f80138bc583a4e6104a30">   45</a></span>&#160;  <span class="keyword">explicit</span> <a class="code" href="classLibInterface.html#a9db717a7c50f80138bc583a4e6104a30">LibInterface</a>(<span class="keyword">const</span> std::string LibName){</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> *FunHandler;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    _LibHandler = dlopen(LibName.c_str(), RTLD_LAZY);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span>(!_LibHandler)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Library not found: &quot;</span> &lt;&lt; LibName &lt;&lt; std::endl;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    FunHandler = dlsym(_LibHandler, <span class="stringliteral">&quot;CreateCmd&quot;</span>);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span>(!FunHandler)</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      std::cerr &lt;&lt; <span class="stringliteral">&quot;Create Cmd function not found&quot;</span> &lt;&lt; std::endl;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classLibInterface.html#a027eac6766c339b86ad2a4b884e604f5">_pCreateCmd</a> = * <span class="keyword">reinterpret_cast&lt;</span><a class="code" href="classInterp4Command.html">Interp4Command</a>* (**)(<span class="keywordtype">void</span>)<span class="keyword">&gt;</span>(&amp;FunHandler);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    _CmdName = <a class="code" href="classLibInterface.html#a027eac6766c339b86ad2a4b884e604f5">_pCreateCmd</a>()-&gt;<a class="code" href="classInterp4Command.html#a9b1bff7ff363991b35965ae9dfeac648">GetCmdName</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classInterp4Command_html"><div class="ttname"><a href="classInterp4Command.html">Interp4Command</a></div><div class="ttdoc">Modeluje abstrakcyjne polecenie dla robota mobilnego. </div><div class="ttdef"><b>Definition:</b> <a href="Interp4Command_8hh_source.html#l00019">Interp4Command.hh:19</a></div></div>
+<div class="ttc" id="classLibInterface_html_a27724b7f22a96b4c04cf143b53c3063d"><div class="ttname"><a href="classLibInterface.html#a27724b7f22a96b4c04cf143b53c3063d">LibInterface::_LibHandler</a></div><div class="ttdeci">void * _LibHandler</div><div class="ttdoc">Wskaznik obslugujacy biblioteke. </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00027">LibInterface.hh:27</a></div></div>
+<div class="ttc" id="classLibInterface_html"><div class="ttname"><a href="classLibInterface.html">LibInterface</a></div><div class="ttdoc">Modeluje interfejs do biblioteki. </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00019">LibInterface.hh:19</a></div></div>
+<div class="ttc" id="classLibInterface_html_aee1190d52de3a1508c9a410c0b2c80d4"><div class="ttname"><a href="classLibInterface.html#aee1190d52de3a1508c9a410c0b2c80d4">LibInterface::GetCmdName</a></div><div class="ttdeci">std::string GetCmdName()</div><div class="ttdoc">Zwraca nazwe polecenia (std::string). </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00036">LibInterface.hh:36</a></div></div>
+<div class="ttc" id="classLibInterface_html_a9db717a7c50f80138bc583a4e6104a30"><div class="ttname"><a href="classLibInterface.html#a9db717a7c50f80138bc583a4e6104a30">LibInterface::LibInterface</a></div><div class="ttdeci">LibInterface(const std::string LibName)</div><div class="ttdoc">Konstruktor klasy. </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00045">LibInterface.hh:45</a></div></div>
+<div class="ttc" id="classLibInterface_html_a027eac6766c339b86ad2a4b884e604f5"><div class="ttname"><a href="classLibInterface.html#a027eac6766c339b86ad2a4b884e604f5">LibInterface::_pCreateCmd</a></div><div class="ttdeci">Interp4Command *(* _pCreateCmd)(void)</div><div class="ttdoc">Zmienna funkcyjna. </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00031">LibInterface.hh:31</a></div></div>
+<div class="ttc" id="classInterp4Command_html_a9b1bff7ff363991b35965ae9dfeac648"><div class="ttname"><a href="classInterp4Command.html#a9b1bff7ff363991b35965ae9dfeac648">Interp4Command::GetCmdName</a></div><div class="ttdeci">virtual const char * GetCmdName() const =0</div><div class="ttdoc">Wyświetla nazwę polecenia. </div></div>
+<div class="ttc" id="classLibInterface_html_a2cdb1a808a17458370917686b0bae722"><div class="ttname"><a href="classLibInterface.html#a2cdb1a808a17458370917686b0bae722">LibInterface::CreateCmd</a></div><div class="ttdeci">Interp4Command * CreateCmd()</div><div class="ttdoc">Zwraca wskaznik na utworzone polecenie. </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00040">LibInterface.hh:40</a></div></div>
+<div class="ttc" id="classLibInterface_html_a7da8e08595488f780795d29b3840fdcf"><div class="ttname"><a href="classLibInterface.html#a7da8e08595488f780795d29b3840fdcf">LibInterface::_CmdName</a></div><div class="ttdeci">std::string _CmdName</div><div class="ttdoc">Nazwa polecenia (std::string). </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00023">LibInterface.hh:23</a></div></div>
+<div class="ttc" id="Interp4Command_8hh_html"><div class="ttname"><a href="Interp4Command_8hh.html">Interp4Command.hh</a></div><div class="ttdoc">Definicja klasy Interp4Command. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="LibInterface_8hh.html">LibInterface.hh</a></li>
+    <li class="footer">Wygenerowano Pn, 16 lis 2020 09:59:23 dla Interpreter programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

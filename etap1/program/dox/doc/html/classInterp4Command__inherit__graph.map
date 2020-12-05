@@ -1,0 +1,6 @@
+<map id="Interp4Command" name="Interp4Command">
+<area shape="rect" id="node2" href="$classInterp4Move.html" title="Modeluje polecenie dla robota mobilnego, które wymusza jego ruch do przodu. " alt="" coords="5,80,107,107"/>
+<area shape="rect" id="node3" href="$classInterp4Pause.html" title="Modeluje polecenie dla robota mobilnego, które wymusza zawieszenie dzialania watku na wybrany czas..." alt="" coords="131,80,237,107"/>
+<area shape="rect" id="node4" href="$classInterp4Rotate.html" title="Modeluje polecenie dla robota mobilnego, które wymusza jego obrot. " alt="" coords="261,80,369,107"/>
+<area shape="rect" id="node5" href="$classInterp4Set.html" title="Modeluje polecenie dla robota mobilnego, które powoduje ustawienie wybranego obiektu w zadanym miejsc..." alt="" coords="393,80,482,107"/>
+</map>

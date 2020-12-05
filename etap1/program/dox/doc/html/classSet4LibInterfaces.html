@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Interpreter: Dokumentacja klasy Set4LibInterfaces</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Interpreter
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('classSet4LibInterfaces.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a> &#124;
+<a href="classSet4LibInterfaces-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Set4LibInterfaces</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Instacja szablonu std::map&lt;string,std::shared_ptr&lt;LibInterface&gt;&gt;  
+ <a href="classSet4LibInterfaces.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:aa6b665f0edb8715c8a48fbe59047ee71"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="Set4LibInterfaces_8hh.html#a5e82a5e3351d18ff5a98ff1a56498dfd">Set0LibInterfaces</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSet4LibInterfaces.html#aa6b665f0edb8715c8a48fbe59047ee71">GetLibInterfaces</a> () const</td></tr>
+<tr class="memdesc:aa6b665f0edb8715c8a48fbe59047ee71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca uchwyt do zbioru wtyczek.  <a href="#aa6b665f0edb8715c8a48fbe59047ee71">Więcej...</a><br /></td></tr>
+<tr class="separator:aa6b665f0edb8715c8a48fbe59047ee71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c75442391b42fcbaeafeb1f54da977a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a">Add</a> (std::shared_ptr&lt; <a class="el" href="classLibInterface.html">LibInterface</a> &gt; &amp;pLibInterface)</td></tr>
+<tr class="memdesc:a9c75442391b42fcbaeafeb1f54da977a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje wtyczke pLibInterface do zbioru.  <a href="#a9c75442391b42fcbaeafeb1f54da977a">Więcej...</a><br /></td></tr>
+<tr class="separator:a9c75442391b42fcbaeafeb1f54da977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf40bcca97ab2937436c257bec09f542"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542">Find</a> (const char *sName, std::shared_ptr&lt; <a class="el" href="classLibInterface.html">LibInterface</a> &gt; &amp;<a class="el" href="classLibInterface.html">LibInterface</a>)</td></tr>
+<tr class="memdesc:adf40bcca97ab2937436c257bec09f542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej <a class="el" href="classLibInterface.html" title="Modeluje interfejs do biblioteki. ">LibInterface</a>.  <a href="#adf40bcca97ab2937436c257bec09f542">Więcej...</a><br /></td></tr>
+<tr class="separator:adf40bcca97ab2937436c257bec09f542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:a7bc25effbe83a073ef0d18125799ba3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Set4LibInterfaces_8hh.html#a5e82a5e3351d18ff5a98ff1a56498dfd">Set0LibInterfaces</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">_Set0LibInterfaces</a></td></tr>
+<tr class="memdesc:a7bc25effbe83a073ef0d18125799ba3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zbior interfejsow do wtyczek.  <a href="#a7bc25effbe83a073ef0d18125799ba3c">Więcej...</a><br /></td></tr>
+<tr class="separator:a7bc25effbe83a073ef0d18125799ba3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="Set4LibInterfaces_8hh_source.html#l00020">20</a> pliku <a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a9c75442391b42fcbaeafeb1f54da977a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c75442391b42fcbaeafeb1f54da977a">&#9670;&nbsp;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Set4LibInterfaces::Add </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLibInterface.html">LibInterface</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pLibInterface</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Set4LibInterfaces_8hh_source.html#l00033">33</a> pliku <a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="main_8cpp_source.html#l00048">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                                        {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">_Set0LibInterfaces</a>.insert(std::pair&lt;std::string,std::shared_ptr&lt;LibInterface&gt;&gt;(pLibInterface-&gt;GetCmdName(),pLibInterface));</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     }</div><div class="ttc" id="classSet4LibInterfaces_html_a7bc25effbe83a073ef0d18125799ba3c"><div class="ttname"><a href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">Set4LibInterfaces::_Set0LibInterfaces</a></div><div class="ttdeci">Set0LibInterfaces _Set0LibInterfaces</div><div class="ttdoc">Zbior interfejsow do wtyczek. </div><div class="ttdef"><b>Definition:</b> <a href="Set4LibInterfaces_8hh_source.html#l00024">Set4LibInterfaces.hh:24</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSet4LibInterfaces_a9c75442391b42fcbaeafeb1f54da977a_icgraph.png" border="0" usemap="#classSet4LibInterfaces_a9c75442391b42fcbaeafeb1f54da977a_icgraph" alt=""/></div>
+<map name="classSet4LibInterfaces_a9c75442391b42fcbaeafeb1f54da977a_icgraph" id="classSet4LibInterfaces_a9c75442391b42fcbaeafeb1f54da977a_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="220,5,275,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adf40bcca97ab2937436c257bec09f542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf40bcca97ab2937436c257bec09f542">&#9670;&nbsp;</a></span>Find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Set4LibInterfaces::Find </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classLibInterface.html">LibInterface</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>LibInterface</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Set4LibInterfaces_8hh_source.html#l00039">39</a> pliku <a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="main_8cpp_source.html#l00031">ExecProgram()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                                           {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      Set0LibInterfaces::const_iterator Iter = <a class="code" href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">_Set0LibInterfaces</a>.find(sName);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">if</span> (Iter == <a class="code" href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">_Set0LibInterfaces</a>.end()) </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <a class="code" href="classLibInterface.html">LibInterface</a> = Iter-&gt;second;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;     }</div><div class="ttc" id="classLibInterface_html"><div class="ttname"><a href="classLibInterface.html">LibInterface</a></div><div class="ttdoc">Modeluje interfejs do biblioteki. </div><div class="ttdef"><b>Definition:</b> <a href="LibInterface_8hh_source.html#l00019">LibInterface.hh:19</a></div></div>
+<div class="ttc" id="classSet4LibInterfaces_html_a7bc25effbe83a073ef0d18125799ba3c"><div class="ttname"><a href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">Set4LibInterfaces::_Set0LibInterfaces</a></div><div class="ttdeci">Set0LibInterfaces _Set0LibInterfaces</div><div class="ttdoc">Zbior interfejsow do wtyczek. </div><div class="ttdef"><b>Definition:</b> <a href="Set4LibInterfaces_8hh_source.html#l00024">Set4LibInterfaces.hh:24</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="classSet4LibInterfaces_adf40bcca97ab2937436c257bec09f542_icgraph.png" border="0" usemap="#classSet4LibInterfaces_adf40bcca97ab2937436c257bec09f542_icgraph" alt=""/></div>
+<map name="classSet4LibInterfaces_adf40bcca97ab2937436c257bec09f542_icgraph" id="classSet4LibInterfaces_adf40bcca97ab2937436c257bec09f542_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a765b97ad7210d2174b0ea9e56de98907" title="ExecProgram" alt="" coords="220,5,327,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="375,5,429,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6b665f0edb8715c8a48fbe59047ee71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b665f0edb8715c8a48fbe59047ee71">&#9670;&nbsp;</a></span>GetLibInterfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="Set4LibInterfaces_8hh.html#a5e82a5e3351d18ff5a98ff1a56498dfd">Set0LibInterfaces</a>&amp; Set4LibInterfaces::GetLibInterfaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Set4LibInterfaces_8hh_source.html#l00029">29</a> pliku <a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="Set4LibInterfaces_8hh_source.html#l00024">_Set0LibInterfaces</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">_Set0LibInterfaces</a>; }</div><div class="ttc" id="classSet4LibInterfaces_html_a7bc25effbe83a073ef0d18125799ba3c"><div class="ttname"><a href="classSet4LibInterfaces.html#a7bc25effbe83a073ef0d18125799ba3c">Set4LibInterfaces::_Set0LibInterfaces</a></div><div class="ttdeci">Set0LibInterfaces _Set0LibInterfaces</div><div class="ttdoc">Zbior interfejsow do wtyczek. </div><div class="ttdef"><b>Definition:</b> <a href="Set4LibInterfaces_8hh_source.html#l00024">Set4LibInterfaces.hh:24</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja atrybutów składowych</h2>
+<a id="a7bc25effbe83a073ef0d18125799ba3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc25effbe83a073ef0d18125799ba3c">&#9670;&nbsp;</a></span>_Set0LibInterfaces</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="Set4LibInterfaces_8hh.html#a5e82a5e3351d18ff5a98ff1a56498dfd">Set0LibInterfaces</a> Set4LibInterfaces::_Set0LibInterfaces</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="Set4LibInterfaces_8hh_source.html#l00024">24</a> pliku <a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="Set4LibInterfaces_8hh_source.html#l00029">GetLibInterfaces()</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z pliku:<ul>
+<li><a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classSet4LibInterfaces.html">Set4LibInterfaces</a></li>
+    <li class="footer">Wygenerowano Pn, 16 lis 2020 09:59:23 dla Interpreter programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

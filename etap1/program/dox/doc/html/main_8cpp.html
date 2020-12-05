@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Interpreter: Dokumentacja pliku main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Interpreter
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj');
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('main_8cpp.html','');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;dlfcn.h&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &quot;<a class="el" href="Interp4Command_8hh_source.html">Interp4Command.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Set4LibInterfaces_8hh_source.html">Set4LibInterfaces.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Scene_8hh_source.html">Scene.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MobileObj_8hh_source.html">MobileObj.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Cuboid_8hh_source.html">Cuboid.hh</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#main_8cpp" alt=""/></div>
+<map name="main_8cpp" id="main_8cpp">
+<area shape="rect" id="node7" href="Interp4Command_8hh.html" title="Definicja klasy Interp4Command. " alt="" coords="148,229,302,256"/>
+<area shape="rect" id="node8" href="MobileObj_8hh.html" title="Zawiera definicję klasy MobileObj. " alt="" coords="328,304,432,331"/>
+<area shape="rect" id="node13" href="Set4LibInterfaces_8hh.html" title="Deklaracja instacji szablonu std::map&lt;string,std::shared_ptr&lt;LibInterface&gt;&gt; " alt="" coords="563,80,716,107"/>
+<area shape="rect" id="node17" href="Scene_8hh.html" title="Deklaracja instacji szablonu std::map&lt;string,std::shared_ptr&lt;MobileObj&gt;&gt; " alt="" coords="777,80,860,107"/>
+<area shape="rect" id="node18" href="Cuboid_8hh.html" title="Zawiera definicje klasy Cuboid. " alt="" coords="378,229,464,256"/>
+<area shape="rect" id="node10" href="Vector3D_8hh.html" title="Deklaracja instacji szablonu geom::Vector. " alt="" coords="262,379,364,405"/>
+<area shape="rect" id="node11" href="geomVector_8hh.html" title="Definicja szablonu wektora N&#45;wymiarowego. " alt="" coords="168,453,287,480"/>
+<area shape="rect" id="node14" href="LibInterface_8hh.html" title="Definicja klasy LibInterface. " alt="" coords="474,155,590,181"/>
+</map>
+</div>
+</div>
+<p><a href="main_8cpp_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:aba889888734a8b272a51d444d70ad2fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aba889888734a8b272a51d444d70ad2fa">LINE_SIZE</a>&#160;&#160;&#160;500</td></tr>
+<tr class="separator:aba889888734a8b272a51d444d70ad2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a8f82d78ce6f79fa0fb91cc1de0f83766"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8f82d78ce6f79fa0fb91cc1de0f83766">ExecPreprocesor</a> (const char *NazwaPliku, istringstream &amp;IStrm4Cmds)</td></tr>
+<tr class="separator:a8f82d78ce6f79fa0fb91cc1de0f83766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765b97ad7210d2174b0ea9e56de98907"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a765b97ad7210d2174b0ea9e56de98907">ExecProgram</a> (istream &amp;rIStrm, <a class="el" href="classSet4LibInterfaces.html">Set4LibInterfaces</a> _Plugins)</td></tr>
+<tr class="separator:a765b97ad7210d2174b0ea9e56de98907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="aba889888734a8b272a51d444d70ad2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba889888734a8b272a51d444d70ad2fa">&#9670;&nbsp;</a></span>LINE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LINE_SIZE&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00012">12</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="main_8cpp_source.html#l00016">ExecPreprocesor()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="a8f82d78ce6f79fa0fb91cc1de0f83766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f82d78ce6f79fa0fb91cc1de0f83766">&#9670;&nbsp;</a></span>ExecPreprocesor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ExecPreprocesor </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>NazwaPliku</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">istringstream &amp;&#160;</td>
+          <td class="paramname"><em>IStrm4Cmds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00016">16</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="main_8cpp_source.html#l00012">LINE_SIZE</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="main_8cpp_source.html#l00048">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">string</span> Cmd4Preproc = <span class="stringliteral">&quot;cpp -P &quot;</span>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">char</span> Line[<a class="code" href="main_8cpp.html#aba889888734a8b272a51d444d70ad2fa">LINE_SIZE</a>];</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        ostringstream OTmpStrm;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        Cmd4Preproc += NazwaPliku;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        FILE* pProc = popen(Cmd4Preproc.c_str(), <span class="stringliteral">&quot;r&quot;</span>);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (!pProc) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">while</span> (fgets(Line,<a class="code" href="main_8cpp.html#aba889888734a8b272a51d444d70ad2fa">LINE_SIZE</a>,pProc)) {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                OTmpStrm &lt;&lt; Line;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        IStrm4Cmds.str(OTmpStrm.str());</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> pclose(pProc) == 0;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="ttc" id="main_8cpp_html_aba889888734a8b272a51d444d70ad2fa"><div class="ttname"><a href="main_8cpp.html#aba889888734a8b272a51d444d70ad2fa">LINE_SIZE</a></div><div class="ttdeci">#define LINE_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00012">main.cpp:12</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a8f82d78ce6f79fa0fb91cc1de0f83766_icgraph.png" border="0" usemap="#main_8cpp_a8f82d78ce6f79fa0fb91cc1de0f83766_icgraph" alt=""/></div>
+<map name="main_8cpp_a8f82d78ce6f79fa0fb91cc1de0f83766_icgraph" id="main_8cpp_a8f82d78ce6f79fa0fb91cc1de0f83766_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="183,5,237,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a765b97ad7210d2174b0ea9e56de98907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765b97ad7210d2174b0ea9e56de98907">&#9670;&nbsp;</a></span>ExecProgram()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ExecProgram </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>rIStrm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSet4LibInterfaces.html">Set4LibInterfaces</a>&#160;</td>
+          <td class="paramname"><em>_Plugins</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00031">31</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="Set4LibInterfaces_8hh_source.html#l00039">Set4LibInterfaces::Find()</a>, <a class="el" href="classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c">Interp4Command::PrintCmd()</a> i <a class="el" href="classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8">Interp4Command::ReadParams()</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="main_8cpp_source.html#l00048">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">string</span> KeyWord;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  shared_ptr&lt;LibInterface&gt; Wtyczka;  </div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classInterp4Command.html">Interp4Command</a> *wInterf;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  rIStrm &gt;&gt; KeyWord;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  </div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">if</span> (!_Plugins.<a class="code" href="classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542">Find</a>(KeyWord.c_str(),Wtyczka))</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  wInterf = Wtyczka-&gt;CreateCmd();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">if</span> (!wInterf-&gt;<a class="code" href="classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8">ReadParams</a>(rIStrm)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  cout &lt;&lt; <span class="stringliteral">&quot;---Parametry---&quot;</span> &lt;&lt; endl;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  wInterf-&gt;<a class="code" href="classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c">PrintCmd</a>();</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div><div class="ttc" id="classInterp4Command_html_a3e15ef01af10fa8961926fd9b0274ab8"><div class="ttname"><a href="classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8">Interp4Command::ReadParams</a></div><div class="ttdeci">virtual bool ReadParams(std::istream &amp;Strm_CmdsList)=0</div><div class="ttdoc">Czyta wartości parametrów danego polecenia. </div></div>
+<div class="ttc" id="classInterp4Command_html_a08fbbf2a70cdac46930b0eba6f5f361c"><div class="ttname"><a href="classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c">Interp4Command::PrintCmd</a></div><div class="ttdeci">virtual void PrintCmd() const =0</div><div class="ttdoc">Wyświetla postać bieżącego polecenia (nazwę oraz wartości parametrów). </div></div>
+<div class="ttc" id="classInterp4Command_html"><div class="ttname"><a href="classInterp4Command.html">Interp4Command</a></div><div class="ttdoc">Modeluje abstrakcyjne polecenie dla robota mobilnego. </div><div class="ttdef"><b>Definition:</b> <a href="Interp4Command_8hh_source.html#l00019">Interp4Command.hh:19</a></div></div>
+<div class="ttc" id="classSet4LibInterfaces_html_adf40bcca97ab2937436c257bec09f542"><div class="ttname"><a href="classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542">Set4LibInterfaces::Find</a></div><div class="ttdeci">bool Find(const char *sName, std::shared_ptr&lt; LibInterface &gt; &amp;LibInterface)</div><div class="ttdoc">Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej LibInt...</div><div class="ttdef"><b>Definition:</b> <a href="Set4LibInterfaces_8hh_source.html#l00039">Set4LibInterfaces.hh:39</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a765b97ad7210d2174b0ea9e56de98907_cgraph.png" border="0" usemap="#main_8cpp_a765b97ad7210d2174b0ea9e56de98907_cgraph" alt=""/></div>
+<map name="main_8cpp_a765b97ad7210d2174b0ea9e56de98907_cgraph" id="main_8cpp_a765b97ad7210d2174b0ea9e56de98907_cgraph">
+<area shape="rect" id="node2" href="classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542" title="Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej LibInt..." alt="" coords="187,5,354,32"/>
+<area shape="rect" id="node3" href="classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c" title="Wyświetla postać bieżącego polecenia (nazwę oraz wartości parametrów). " alt="" coords="170,56,371,83"/>
+<area shape="rect" id="node4" href="classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8" title="Czyta wartości parametrów danego polecenia. " alt="" coords="160,107,381,133"/>
+</map>
+</div>
+<div class="dynheader">
+Oto graf wywoływań tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a765b97ad7210d2174b0ea9e56de98907_icgraph.png" border="0" usemap="#main_8cpp_a765b97ad7210d2174b0ea9e56de98907_icgraph" alt=""/></div>
+<map name="main_8cpp_a765b97ad7210d2174b0ea9e56de98907_icgraph" id="main_8cpp_a765b97ad7210d2174b0ea9e56de98907_icgraph">
+<area shape="rect" id="node2" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="160,5,215,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="main_8cpp_source.html#l00048">48</a> pliku <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="Set4LibInterfaces_8hh_source.html#l00033">Set4LibInterfaces::Add()</a>, <a class="el" href="main_8cpp_source.html#l00016">ExecPreprocesor()</a> i <a class="el" href="main_8cpp_source.html#l00031">ExecProgram()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// Sprawdzamy, czy jest wystarczajaca ilosc argumentow</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span> ( argc &lt; 2) {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::cerr &lt;&lt; <span class="stringliteral">&quot;!!! Za malo arguemntow\n&quot;</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> 1;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  cout &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;Nazwa pliku: &quot;</span> &lt;&lt; argv[1] &lt;&lt; endl;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  istringstream IStrm;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="main_8cpp.html#a8f82d78ce6f79fa0fb91cc1de0f83766">ExecPreprocesor</a>(argv[1], IStrm)) {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> 2;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  cout &lt;&lt; IStrm.str() &lt;&lt;endl;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  </div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classSet4LibInterfaces.html">Set4LibInterfaces</a> Plugins;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="classScene.html">Scene</a> Scena;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  shared_ptr&lt;Cuboid&gt; Kostka = make_shared&lt;Cuboid&gt;();</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  shared_ptr&lt;LibInterface&gt; Interface4Move = make_shared&lt;LibInterface&gt;(<span class="stringliteral">&quot;libInterp4Move.so&quot;</span>),</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                           Interface4Set = make_shared&lt;LibInterface&gt;(<span class="stringliteral">&quot;libInterp4Set.so&quot;</span>),</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                           Interface4Rotate = make_shared&lt;LibInterface&gt;(<span class="stringliteral">&quot;libInterp4Rotate.so&quot;</span>),</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                           Interface4Pause = make_shared&lt;LibInterface&gt;(<span class="stringliteral">&quot;libInterp4Pause.so&quot;</span>);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  Plugins.<a class="code" href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a">Add</a>(Interface4Move);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  Plugins.<a class="code" href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a">Add</a>(Interface4Set);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  Plugins.<a class="code" href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a">Add</a>(Interface4Rotate);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  Plugins.<a class="code" href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a">Add</a>(Interface4Pause);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  </div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">while</span>(<a class="code" href="main_8cpp.html#a765b97ad7210d2174b0ea9e56de98907">ExecProgram</a>(IStrm, Plugins));</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; }</div><div class="ttc" id="classSet4LibInterfaces_html_a9c75442391b42fcbaeafeb1f54da977a"><div class="ttname"><a href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a">Set4LibInterfaces::Add</a></div><div class="ttdeci">void Add(std::shared_ptr&lt; LibInterface &gt; &amp;pLibInterface)</div><div class="ttdoc">Dodaje wtyczke pLibInterface do zbioru. </div><div class="ttdef"><b>Definition:</b> <a href="Set4LibInterfaces_8hh_source.html#l00033">Set4LibInterfaces.hh:33</a></div></div>
+<div class="ttc" id="main_8cpp_html_a8f82d78ce6f79fa0fb91cc1de0f83766"><div class="ttname"><a href="main_8cpp.html#a8f82d78ce6f79fa0fb91cc1de0f83766">ExecPreprocesor</a></div><div class="ttdeci">bool ExecPreprocesor(const char *NazwaPliku, istringstream &amp;IStrm4Cmds)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00016">main.cpp:16</a></div></div>
+<div class="ttc" id="main_8cpp_html_a765b97ad7210d2174b0ea9e56de98907"><div class="ttname"><a href="main_8cpp.html#a765b97ad7210d2174b0ea9e56de98907">ExecProgram</a></div><div class="ttdeci">bool ExecProgram(istream &amp;rIStrm, Set4LibInterfaces _Plugins)</div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00031">main.cpp:31</a></div></div>
+<div class="ttc" id="classScene_html"><div class="ttname"><a href="classScene.html">Scene</a></div><div class="ttdoc">Instacja szablonu std::map&lt;string,std::shared_ptr&lt;MobileObj&gt;&gt; </div><div class="ttdef"><b>Definition:</b> <a href="Scene_8hh_source.html#l00019">Scene.hh:19</a></div></div>
+<div class="ttc" id="classSet4LibInterfaces_html"><div class="ttname"><a href="classSet4LibInterfaces.html">Set4LibInterfaces</a></div><div class="ttdoc">Instacja szablonu std::map&lt;string,std::shared_ptr&lt;LibInterface&gt;&gt; </div><div class="ttdef"><b>Definition:</b> <a href="Set4LibInterfaces_8hh_source.html#l00020">Set4LibInterfaces.hh:20</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Oto graf wywołań dla tej funkcji:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
+<map name="main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" id="node2" href="classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a" title="Dodaje wtyczke pLibInterface do zbioru. " alt="" coords="108,5,275,32"/>
+<area shape="rect" id="node3" href="main_8cpp.html#a8f82d78ce6f79fa0fb91cc1de0f83766" title="ExecPreprocesor" alt="" coords="127,56,256,83"/>
+<area shape="rect" id="node4" href="main_8cpp.html#a765b97ad7210d2174b0ea9e56de98907" title="ExecProgram" alt="" coords="138,107,245,133"/>
+<area shape="rect" id="node5" href="classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542" title="Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej LibInt..." alt="" coords="350,56,517,83"/>
+<area shape="rect" id="node6" href="classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c" title="Wyświetla postać bieżącego polecenia (nazwę oraz wartości parametrów). " alt="" coords="333,107,534,133"/>
+<area shape="rect" id="node7" href="classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8" title="Czyta wartości parametrów danego polecenia. " alt="" coords="323,157,544,184"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
+    <li class="footer">Wygenerowano Pn, 16 lis 2020 09:59:23 dla Interpreter programem
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

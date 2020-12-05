@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classSet4LibInterfaces.html#a9c75442391b42fcbaeafeb1f54da977a" title="Dodaje wtyczke pLibInterface do zbioru. " alt="" coords="108,5,275,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a8f82d78ce6f79fa0fb91cc1de0f83766" title="ExecPreprocesor" alt="" coords="127,56,256,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a765b97ad7210d2174b0ea9e56de98907" title="ExecProgram" alt="" coords="138,107,245,133"/>
+<area shape="rect" id="node5" href="$classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542" title="Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej LibInt..." alt="" coords="350,56,517,83"/>
+<area shape="rect" id="node6" href="$classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c" title="Wyświetla postać bieżącego polecenia (nazwę oraz wartości parametrów). " alt="" coords="333,107,534,133"/>
+<area shape="rect" id="node7" href="$classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8" title="Czyta wartości parametrów danego polecenia. " alt="" coords="323,157,544,184"/>
+</map>

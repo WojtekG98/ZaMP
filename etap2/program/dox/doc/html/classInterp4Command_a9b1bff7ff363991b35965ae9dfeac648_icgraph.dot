@@ -1,0 +1,11 @@
+digraph "Interp4Command::GetCmdName"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node11 [label="Interp4Command::GetCmdName",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node12 [label="LibInterface::LibInterface",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLibInterface.html#a9db717a7c50f80138bc583a4e6104a30",tooltip="Konstruktor klasy. "];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node13 [label="Interp4Command::~Interp4\lCommand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInterp4Command.html#a620ba28206850d0bce8dbb2364c73366",tooltip="Destruktor wirtualny ze wzgledu na klasy pochodne. "];
+}
