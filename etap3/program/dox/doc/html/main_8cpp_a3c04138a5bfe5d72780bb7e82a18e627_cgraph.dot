@@ -1,0 +1,17 @@
+digraph "main"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="ProgramInterpreter\l::ExecProgram",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProgramInterpreter.html#afce17fb26f6d8b432400e41799c90549"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="Set4LibInterfaces::Find",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSet4LibInterfaces.html#adf40bcca97ab2937436c257bec09f542",tooltip="Znajduje wtyczke o nazwie sName w zbiorze i zwraca wskaznik dzielony na ta wtyczke do zmiennej LibInt..."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Interp4Command::ReadParams",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInterp4Command.html#a3e15ef01af10fa8961926fd9b0274ab8",tooltip="Czyta wartości parametrów danego polecenia. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node4 [label="Interp4Command::PrintCmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInterp4Command.html#a08fbbf2a70cdac46930b0eba6f5f361c",tooltip="Wyświetla postać bieżącego polecenia (nazwę oraz wartości parametrów). "];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node5 [label="ProgramInterpreter\l::Read_XML_Config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classProgramInterpreter.html#a1d3f49787ae09db356d1f064d90073e3"];
+}

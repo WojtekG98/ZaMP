@@ -1,0 +1,9 @@
+digraph "Graficzna hierarchia klas"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13 [label="DefaultHandler",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node13 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node0 [label="XMLInterp4Config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classXMLInterp4Config.html",tooltip="Implementuje reakcje na napotkane elementu opisu akcji. "];
+}

@@ -1,0 +1,14 @@
+digraph "Interp4Set"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node2 [label="Interp4Set",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="Interp4Command",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInterp4Command.html",tooltip="Modeluje abstrakcyjne polecenie dla robota mobilnego. "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _DesPosition_m" ,fontname="FreeSans"];
+  Node4 [label="geom::Vector\< double, 3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgeom_1_1Vector.html"];
+  Node5 -> Node4 [dir="back",color="orange",fontsize="10",style="dashed",label=" \< double, 3 \>" ,fontname="FreeSans"];
+  Node5 [label="geom::Vector\< Type,\l Size \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classgeom_1_1Vector.html",tooltip="Model wektora N-wymiarowego. "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _Coord" ,fontname="FreeSans"];
+  Node6 [label="Type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}
