@@ -14,8 +14,6 @@
      
 /*!
  * \brief Modeluje interfejs do biblioteki
- *
- *  Klasa modeluje interfejs do biblioteki
  */
 class LibInterface{
   /*!
@@ -27,7 +25,7 @@ class LibInterface{
    */
   void *_LibHandler;
   /*!
-   * \brief Zmienna funkcyjna.
+   * \brief Wskaznik na funkcje CreateCmd z wtyczki.
    */
   Interp4Command *(*_pCreateCmd)(void);
  public:
@@ -48,13 +46,16 @@ class LibInterface{
     void *FunHandler;
     _LibHandler = dlopen(LibName.c_str(), RTLD_LAZY);
     
-    if(!_LibHandler)
+    if(!_LibHandler){
       std::cerr << "Library not found: " << LibName << std::endl;
-    // TUTAJ BEDZIE SEGMENTATION FAULT WIEC TRZEBA DODAC WYJATEK I JEGO OBSULGE
+      throw 1;
+    }
     FunHandler = dlsym(_LibHandler, "CreateCmd");
-    if(!FunHandler)
+    if(!FunHandler){
       std::cerr << "Create Cmd function not found" << std::endl;
-    
+      dlclose(_LibHandler);
+      throw 2;
+    }
     _pCreateCmd = * reinterpret_cast<Interp4Command* (**)(void)>(&FunHandler);
     _CmdName = _pCreateCmd()->GetCmdName();
   }

@@ -86,10 +86,6 @@ class XMLInterp4Config : public xercesc::DefaultHandler {
     void ProcessCubeAttrs(const xercesc::Attributes&   Attrs); 
   private:
    /*!
-    *  \brief Wskaznik pomocniczy (do usuniecia).
-    */
-    shared_ptr<string> napis2;
-   /*!
     * \brief Wskaźnik na zbior interfejsow do wtyczek.
     */
     shared_ptr<Set4LibInterfaces> Libs;

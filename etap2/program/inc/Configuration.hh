@@ -14,10 +14,6 @@ using namespace std;
 class Configuration {
 public:
  /*!
-  * \brief Wskaznik pomocniczy (do usuniecia).
-  */
-  shared_ptr<string> napis;
- /*!
   * \brief Wskaźnik na zbior interfejsow do wtyczek.
   */
   shared_ptr<Set4LibInterfaces> LibManager;
@@ -25,7 +21,10 @@ public:
   * \brief Wskaźnik na Scene.
   */
   shared_ptr<Scene> Scn;
-//NALEZY DODAC KONSTRUKTOR
+  Configuration(){
+   LibManager = make_shared<Set4LibInterfaces>();
+   Scn = make_shared<Scene>();
+  }
 };
 
 

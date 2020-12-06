@@ -17,14 +17,8 @@ using namespace xercesc;
  */
 XMLInterp4Config::XMLInterp4Config(Configuration &rConfig)
 {
-  napis2 = make_shared<string>();
-  rConfig.napis = napis2;
-  
-  Libs = make_shared<Set4LibInterfaces>();
-  rConfig.LibManager = Libs;
-// PRZENIESC MAKE SHARED DO KONSTRUKTORA CONFIGURATION ALBO NAWET KONSTRUKTOR PARAMETRZYCZNY OD WSKAZNIKOW I POPROSTU PRZEPISYWAC
-  Scena = make_shared<Scene>();
-  rConfig.Scn = Scena;
+  Libs = rConfig.LibManager;
+  Scena = rConfig.Scn;
 }
 
 
@@ -74,22 +68,19 @@ void XMLInterp4Config::ProcessLibAttrs(const xercesc::Attributes  &Attrs)
 
  cout << "  Nazwa biblioteki: " << sLibName << endl;
 
- // Tu trzeba wpisać własny kod ...
- napis2->append(" ");
- napis2->append(sLibName);
+ try {
+   shared_ptr<LibInterface> Interface = make_shared<LibInterface>(sLibName);
+   shared_ptr<LibInterface> Interface2;
 
- shared_ptr<LibInterface> Interface = make_shared<LibInterface>(sLibName);
- shared_ptr<LibInterface> Interface2;
-
- cout << " Utworzono wtyczke: " << sLibName << endl;
- Libs->Add(Interface);
-
- cout << Interface->GetCmdName() << endl;
- if (!Libs->Find(sLibName, Interface2))
- 	cout<< "Nie udało sie dodać wtyczki" << endl;
- else
- 	cout << "Dodano wtyczke" << endl;
-
+   cout << " Utworzono wtyczke: " << sLibName << endl;
+   Libs->Add(Interface);
+   if (!Libs->Find(Interface->GetCmdName().c_str(), Interface2))
+ 	cout<< "   Nie udało sie dodać wtyczki!!" << endl;
+   else
+ 	cout << "  Dodano wtyczke do zbioru" << endl;
+   }
+ catch (int errint){
+   cout << "  Nie udało się utworzyć wtyczki: " << sLibName << ", kod błędu: "<< errint << endl;}
  xercesc::XMLString::release(&sParamName);
  xercesc::XMLString::release(&sLibName);
 }
@@ -131,38 +122,38 @@ void XMLInterp4Config::ProcessCubeAttrs(const xercesc::Attributes  &Attrs)
       << "     " << sName_RGB << " = \"" << sValue_RGB << "\"" << endl   
       << endl; 
  //------------------------------------------------
- // Przykład czytania wartości parametrów
+ // Czytanie wartości parametrów
  //
- istringstream IStrm;
- IStrm.str(sValue_SizeXYZ);
- double  x,y,z;
+ istringstream IStrmXYZ, IStrmRGB;
+ Vector3D desPos;
+ VectorRGB desColor;
+ shared_ptr<Cuboid> Kostka = make_shared<Cuboid>();
 
- IStrm >> x >> y >> z;
- if (IStrm.fail()) {
-     cerr << " Blad!!!" << endl;
+ IStrmXYZ.str(sValue_SizeXYZ);
+ IStrmXYZ >> desPos[0] >> desPos[1] >> desPos[2];
+ if (IStrmXYZ.fail()) {
+     cerr << " Blad czytania XYZ!!!" << endl;
  } else {
-     cout << " Czytanie wartosci OK!!!" << endl;
-     cout << "     " << x << "  " << y << "  " << z << endl;
+     cout << " Czytanie wartosci XYZ OK!!!" << endl;
+     cout << "     " << desPos[0] << "  " << desPos[1] << "  " << desPos[2] << endl;
  }
 
- // Tu trzeba wstawić odpowiednio własny kod ...
-
- shared_ptr<Cuboid> Kostka = make_shared<Cuboid>();
- Vector3D desPos;
- IStrm.str(sValue_SizeXYZ);
- IStrm >> desPos[0] >> desPos[1] >> desPos[2];
-
- IStrm.str(sValue_RGB);
- IStrm >> Kostka->color[0] >> Kostka->color[1] >> Kostka->color[2];
-
- Kostka->SetName(sValue_Name);
- Kostka->SetPosition_m(desPos);
-
- shared_ptr<MobileObj> Kostka2 = make_shared<Cuboid>();
- Kostka2 = Kostka;
- Scena->Add(Kostka2);
- cout << "Utworzono obiekt: " << sValue_Name << ",w: " << desPos << endl;
-
+ IStrmRGB.str(sValue_RGB);
+ IStrmRGB >> Kostka->color[0] >> Kostka->color[1] >> Kostka->color[2];
+ if (IStrmRGB.fail()) {
+     cerr << " Blad czytania koloru!!!" << endl;
+ } else {
+     cout << " Czytanie wartosci koloru OK!!!" << endl;
+     cout << "     " << Kostka->color[0] << "  " << Kostka->color[1] << "  " << Kostka->color[2] << endl;
+ }
+ if (!IStrmXYZ.fail() && !IStrmRGB.fail()){
+   Kostka->SetName(sValue_Name);
+   Kostka->SetPosition_m(desPos);
+   shared_ptr<MobileObj> Kostka2 = make_shared<Cuboid>();
+   Kostka2 = Kostka;
+   Scena->Add(Kostka2);
+   cout << "Utworzono obiekt: " << sValue_Name << ",w: " << desPos << endl;
+ }
  xercesc::XMLString::release(&sName_Name);
  xercesc::XMLString::release(&sName_SizeXYZ);
  xercesc::XMLString::release(&sName_RGB);
