@@ -1,0 +1,11 @@
+digraph "Interp4Set::PrintCmd"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  rankdir="LR";
+  Node16 [label="Interp4Set::PrintCmd",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node17 [label="Interp4Set::GetCmdName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInterp4Set.html#a7e61011caf16bc5bcdae597dc58db324",tooltip="Wyświetla nazwę polecenia. "];
+  Node17 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node18 [label="GetCmdName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Interp4Set_8cpp.html#a161c2be237a6e239fb12733df42be258"];
+}

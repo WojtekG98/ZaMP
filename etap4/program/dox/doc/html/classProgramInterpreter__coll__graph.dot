@@ -1,0 +1,10 @@
+digraph "ProgramInterpreter"
+{
+  edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
+  node [fontname="FreeSans",fontsize="10",shape=record];
+  Node1 [label="ProgramInterpreter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _Scn" ,fontname="FreeSans"];
+  Node2 [label="Scene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classScene.html",tooltip="Klasa modelujaca Scene, czyli zbior obiektow mobilnych. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _LibManager" ,fontname="FreeSans"];
+  Node3 [label="Set4LibInterfaces",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSet4LibInterfaces.html",tooltip="Klasa modelujaca zbior interfejsow do wtyczek. "];
+}
