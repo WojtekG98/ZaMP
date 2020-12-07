@@ -31,9 +31,9 @@ using namespace xercesc;
  */
 class ProgramInterpreter {
    /*!
-    * \brief obiekt _Sc zawierający Scene - zbiór obiektów mobilnych.
+    * \brief wskaźnik na obiekt _Scn zawierający uchwyt do  Sceny - zbiór obiektów mobilnych.
     */
-    Scene   _Scn;
+    shared_ptr<Scene>   _Scn;
    /*!
     * \brief obiekt _LibManager zawierający Set4LibInterfaces - zbiór wtyczek.
     */
@@ -42,6 +42,48 @@ class ProgramInterpreter {
     * \brief ibket Socket2Serv zawierajacy numer portu do komunikacji z serwerem.
     */
     int Socket2Serv = PORT;
+  int Send(const char *sMesg){
+  	ssize_t  IlWyslanych;
+  	ssize_t  IlDoWyslania = (ssize_t) strlen(sMesg);
+
+  	while ((IlWyslanych = write(Socket2Serv,sMesg,IlDoWyslania)) > 0) {
+  	  IlDoWyslania -= IlWyslanych;
+  	  sMesg += IlWyslanych;
+  	}
+  	if (IlWyslanych < 0) {
+  	  cerr << "*** Blad przeslania napisu." << endl;
+  	}
+  	return 0;
+  }
+  /*!
+   * Otwiera połączenie sieciowe
+   * \param[out]  rSocket - deskryptor gniazda, poprzez które może być
+   *                        realizowana komunikacja sieciowa.
+   */
+  bool OpenConnection(){
+  struct sockaddr_in  DaneAdSerw;
+
+  bzero((char *)&DaneAdSerw,sizeof(DaneAdSerw));
+
+  DaneAdSerw.sin_family = AF_INET;
+  DaneAdSerw.sin_addr.s_addr = inet_addr("127.0.0.1");
+  DaneAdSerw.sin_port = htons(PORT);
+
+
+  Socket2Serv = socket(AF_INET,SOCK_STREAM,0);
+
+  if (Socket2Serv < 0) {
+  	cerr << "*** Blad otwarcia gniazda." << endl;
+  	return false;
+  }
+
+  if (connect(Socket2Serv,(struct sockaddr*)&DaneAdSerw,sizeof(DaneAdSerw)) < 0){
+  	cerr << "*** Brak mozliwosci polaczenia do portu: " << PORT << endl;
+   	return false;
+  }
+
+  return true;
+  }
   public:
    /*!
     * Czyta z pliku spis wtyczek i obiektów, a następnie dodaje je do _Scn i _LibManager.
@@ -116,7 +158,7 @@ class ProgramInterpreter {
             return false;
   	 }
 	_LibManager = *rConfig.LibManager;
-	_Scn = *rConfig.Scn;
+	_Scn = rConfig.Scn;
 	return true;
    	delete pParser;
    	delete pHandler;
@@ -162,12 +204,37 @@ class ProgramInterpreter {
   return true;
  }
 /*!
- * Czyta z pliku spis wtyczek i obiektów, a następnie dodaje je do _Scn i _LibManager.
- * \param sFileName - (\b we.) nazwa pliku z spisem wtyczek i obiektów.
- * \retval true - jeśli wczytanie zostało zrealizowane poprawnie,
- * \retval false - w przeciwnym przypadku.
+ * Wysyła aktualną scene na serwer.
  */ 
- bool SendSceneState2Server();
+ bool SendSceneState2Server(){
+  if (OpenConnection())
+  	cout << "\n POLACZENIE OTWARTE\n";
+  else
+	cout << "\n NIE UDALO SIE OTWORZYC POLACZENIA \n";
+  _Scn->LockAccess();
+       
+   //------- Przeglądanie tej kolekcji to uproszczony przykład
+       
+  Send("Clear\n"); // To jest konieczne, aby usunąć wcześniejsze obiekty.
+  cout << "Clear\n";
+  //for (const MobileObj &rObj : _Scn->GetMobObjs().lower_bound()) {
+  Set0MobileObjs::iterator it;
+  for (auto const& [key, val] : _Scn->GetMobObjs()){
+                                     // Ta instrukcja to tylko uproszczony przykład
+	cout << val << "  " << key << endl;//.GetName();
+  	//Send(val.GetName().c_str()); // Tu musi zostać wywołanie odpowiedniej
+                                      // metody/funkcji gerującej polecenia dla serwera.
+  }
+  Send("Display\n"); // To jest konieczne, aby zobaczyć zmiany
+  cout << "Display\n";
+       
+  _Scn->CancelChange();
+  _Scn->UnlockAccess();
+  cout << "Close\n" << endl; // To tylko, aby pokazac wysylana instrukcje
+  Send("Close\n");\
+  close(Socket2Serv);
+  return true;
+  }
 };    
 #endif
 

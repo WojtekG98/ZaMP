@@ -36,5 +36,6 @@ int main(int argc, char** argv)
   if(!Inter.Read_XML_Config("./config/config.xml")) return 2;
 
   if(!Inter.ExecProgram(argv[1])) return 3;
+  Inter.SendSceneState2Server();
  }
 

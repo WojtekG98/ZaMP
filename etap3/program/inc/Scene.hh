@@ -2,6 +2,7 @@
 #define SCENE_HH
 
 #include "MobileObj.hh"
+#include "AccessControl.hh"
 #include <string>
 #include <memory>
 #include <map>
@@ -16,7 +17,7 @@ typedef map<string,shared_ptr<MobileObj>> Set0MobileObjs; // Set of Mobile Objet
 /*!
  * \brief Klasa modelujaca Scene, czyli zbior obiektow mobilnych
  */
-class Scene {
+class Scene: public AccessControl {
    /*!
     * \brief Zbior obiektow mobilnych.
     */
