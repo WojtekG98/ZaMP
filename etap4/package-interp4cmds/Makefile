@@ -329,7 +329,7 @@ top_builddir = .
 top_srcdir = .
 SUBDIRS = src inc src-lib
 ACLOCAL_AMFLAGS = -I m4
-EXTRA_DIST = README LICENSE INSTALL
+EXTRA_DIST = README LICENSE INSTALL config opis_dzialan.cmd
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
 

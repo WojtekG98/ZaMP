@@ -500,7 +500,7 @@ configure:15930: $? = 0
 configure:15939: result: yes
 configure:15956: checking for library containing dlopen
 configure:15987: g++ -o conftest -g -O2   conftest.cpp -lxerces-c  >&5
-/tmp/cc63meKs.o: In function `main':
+/tmp/ccUQwuum.o: In function `main':
 /home/wojtek/Desktop/zamp/etap4/package-interp4cmds/conftest.cpp:35: undefined reference to `dlopen'
 collect2: error: ld returned 1 exit status
 configure:15987: $? = 1

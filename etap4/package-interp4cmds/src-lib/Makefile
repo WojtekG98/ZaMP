@@ -130,34 +130,38 @@ am__uninstall_files_from_dir = { \
   }
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
-libMove_la_LIBADD =
-am_libMove_la_OBJECTS = libMove_la-Interp4Move.lo
-libMove_la_OBJECTS = $(am_libMove_la_OBJECTS)
+libInterp4Move_la_LIBADD =
+am_libInterp4Move_la_OBJECTS = libInterp4Move_la-Interp4Move.lo
+libInterp4Move_la_OBJECTS = $(am_libInterp4Move_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
 am__v_lt_0 = --silent
 am__v_lt_1 = 
-libMove_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(libMove_la_CXXFLAGS) \
-	$(CXXFLAGS) $(libMove_la_LDFLAGS) $(LDFLAGS) -o $@
-libPause_la_LIBADD =
-am_libPause_la_OBJECTS = libPause_la-Interp4Pause.lo
-libPause_la_OBJECTS = $(am_libPause_la_OBJECTS)
-libPause_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(libPause_la_CXXFLAGS) \
-	$(CXXFLAGS) $(libPause_la_LDFLAGS) $(LDFLAGS) -o $@
-libRotate_la_LIBADD =
-am_libRotate_la_OBJECTS = libRotate_la-Interp4Rotate.lo
-libRotate_la_OBJECTS = $(am_libRotate_la_OBJECTS)
-libRotate_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(libRotate_la_CXXFLAGS) \
-	$(CXXFLAGS) $(libRotate_la_LDFLAGS) $(LDFLAGS) -o $@
-libSet_la_LIBADD =
-am_libSet_la_OBJECTS = libSet_la-Interp4Set.lo
-libSet_la_OBJECTS = $(am_libSet_la_OBJECTS)
-libSet_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
-	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(libSet_la_CXXFLAGS) \
-	$(CXXFLAGS) $(libSet_la_LDFLAGS) $(LDFLAGS) -o $@
+libInterp4Move_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(libInterp4Move_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libInterp4Move_la_LDFLAGS) $(LDFLAGS) -o $@
+libInterp4Pause_la_LIBADD =
+am_libInterp4Pause_la_OBJECTS = libInterp4Pause_la-Interp4Pause.lo
+libInterp4Pause_la_OBJECTS = $(am_libInterp4Pause_la_OBJECTS)
+libInterp4Pause_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(libInterp4Pause_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libInterp4Pause_la_LDFLAGS) $(LDFLAGS) -o $@
+libInterp4Rotate_la_LIBADD =
+am_libInterp4Rotate_la_OBJECTS = libInterp4Rotate_la-Interp4Rotate.lo
+libInterp4Rotate_la_OBJECTS = $(am_libInterp4Rotate_la_OBJECTS)
+libInterp4Rotate_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(libInterp4Rotate_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libInterp4Rotate_la_LDFLAGS) $(LDFLAGS) -o $@
+libInterp4Set_la_LIBADD =
+am_libInterp4Set_la_OBJECTS = libInterp4Set_la-Interp4Set.lo
+libInterp4Set_la_OBJECTS = $(am_libInterp4Set_la_OBJECTS)
+libInterp4Set_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
+	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
+	$(libInterp4Set_la_CXXFLAGS) $(CXXFLAGS) \
+	$(libInterp4Set_la_LDFLAGS) $(LDFLAGS) -o $@
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -192,10 +196,11 @@ AM_V_CXXLD = $(am__v_CXXLD_$(V))
 am__v_CXXLD_ = $(am__v_CXXLD_$(AM_DEFAULT_VERBOSITY))
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-SOURCES = $(libMove_la_SOURCES) $(libPause_la_SOURCES) \
-	$(libRotate_la_SOURCES) $(libSet_la_SOURCES)
-DIST_SOURCES = $(libMove_la_SOURCES) $(libPause_la_SOURCES) \
-	$(libRotate_la_SOURCES) $(libSet_la_SOURCES)
+SOURCES = $(libInterp4Move_la_SOURCES) $(libInterp4Pause_la_SOURCES) \
+	$(libInterp4Rotate_la_SOURCES) $(libInterp4Set_la_SOURCES)
+DIST_SOURCES = $(libInterp4Move_la_SOURCES) \
+	$(libInterp4Pause_la_SOURCES) $(libInterp4Rotate_la_SOURCES) \
+	$(libInterp4Set_la_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -344,19 +349,19 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-lib_LTLIBRARIES = libMove.la libPause.la libRotate.la libSet.la
-libMove_la_SOURCES = Interp4Move.cpp
-libMove_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
-libPause_la_SOURCES = Interp4Pause.cpp
-libPause_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
-libRotate_la_SOURCES = Interp4Rotate.cpp
-libRotate_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
-libSet_la_SOURCES = Interp4Set.cpp
-libSet_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
-libMove_la_LDFLAGS = -module -version-info 1:0:0
-libPause_la_LDFLAGS = -module -version-info 1:0:0
-libRotate_la_LDFLAGS = -module -version-info 1:0:0
-libSet_la_LDFLAGS = -module -version-info 1:0:0
+lib_LTLIBRARIES = libInterp4Move.la libInterp4Pause.la libInterp4Rotate.la libInterp4Set.la
+libInterp4Move_la_SOURCES = Interp4Move.cpp
+libInterp4Move_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
+libInterp4Move_la_LDFLAGS = -module -version-info 1:0:0
+libInterp4Pause_la_SOURCES = Interp4Pause.cpp
+libInterp4Pause_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
+libInterp4Pause_la_LDFLAGS = -module -version-info 1:0:0
+libInterp4Rotate_la_SOURCES = Interp4Rotate.cpp
+libInterp4Rotate_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
+libInterp4Rotate_la_LDFLAGS = -module -version-info 1:0:0
+libInterp4Set_la_SOURCES = Interp4Set.cpp
+libInterp4Set_la_CXXFLAGS = -I../inc -I../../../inc -std=c++17
+libInterp4Set_la_LDFLAGS = -module -version-info 1:0:0
 all: all-am
 
 .SUFFIXES:
@@ -426,17 +431,17 @@ clean-libLTLIBRARIES:
 	  rm -f $${locs}; \
 	}
 
-libMove.la: $(libMove_la_OBJECTS) $(libMove_la_DEPENDENCIES) $(EXTRA_libMove_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libMove_la_LINK) -rpath $(libdir) $(libMove_la_OBJECTS) $(libMove_la_LIBADD) $(LIBS)
+libInterp4Move.la: $(libInterp4Move_la_OBJECTS) $(libInterp4Move_la_DEPENDENCIES) $(EXTRA_libInterp4Move_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libInterp4Move_la_LINK) -rpath $(libdir) $(libInterp4Move_la_OBJECTS) $(libInterp4Move_la_LIBADD) $(LIBS)
 
-libPause.la: $(libPause_la_OBJECTS) $(libPause_la_DEPENDENCIES) $(EXTRA_libPause_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libPause_la_LINK) -rpath $(libdir) $(libPause_la_OBJECTS) $(libPause_la_LIBADD) $(LIBS)
+libInterp4Pause.la: $(libInterp4Pause_la_OBJECTS) $(libInterp4Pause_la_DEPENDENCIES) $(EXTRA_libInterp4Pause_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libInterp4Pause_la_LINK) -rpath $(libdir) $(libInterp4Pause_la_OBJECTS) $(libInterp4Pause_la_LIBADD) $(LIBS)
 
-libRotate.la: $(libRotate_la_OBJECTS) $(libRotate_la_DEPENDENCIES) $(EXTRA_libRotate_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libRotate_la_LINK) -rpath $(libdir) $(libRotate_la_OBJECTS) $(libRotate_la_LIBADD) $(LIBS)
+libInterp4Rotate.la: $(libInterp4Rotate_la_OBJECTS) $(libInterp4Rotate_la_DEPENDENCIES) $(EXTRA_libInterp4Rotate_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libInterp4Rotate_la_LINK) -rpath $(libdir) $(libInterp4Rotate_la_OBJECTS) $(libInterp4Rotate_la_LIBADD) $(LIBS)
 
-libSet.la: $(libSet_la_OBJECTS) $(libSet_la_DEPENDENCIES) $(EXTRA_libSet_la_DEPENDENCIES) 
-	$(AM_V_CXXLD)$(libSet_la_LINK) -rpath $(libdir) $(libSet_la_OBJECTS) $(libSet_la_LIBADD) $(LIBS)
+libInterp4Set.la: $(libInterp4Set_la_OBJECTS) $(libInterp4Set_la_DEPENDENCIES) $(EXTRA_libInterp4Set_la_DEPENDENCIES) 
+	$(AM_V_CXXLD)$(libInterp4Set_la_LINK) -rpath $(libdir) $(libInterp4Set_la_OBJECTS) $(libInterp4Set_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -444,10 +449,10 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/libMove_la-Interp4Move.Plo
-include ./$(DEPDIR)/libPause_la-Interp4Pause.Plo
-include ./$(DEPDIR)/libRotate_la-Interp4Rotate.Plo
-include ./$(DEPDIR)/libSet_la-Interp4Set.Plo
+include ./$(DEPDIR)/libInterp4Move_la-Interp4Move.Plo
+include ./$(DEPDIR)/libInterp4Pause_la-Interp4Pause.Plo
+include ./$(DEPDIR)/libInterp4Rotate_la-Interp4Rotate.Plo
+include ./$(DEPDIR)/libInterp4Set_la-Interp4Set.Plo
 
 .cpp.o:
 	$(AM_V_CXX)$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -470,33 +475,33 @@ include ./$(DEPDIR)/libSet_la-Interp4Set.Plo
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(LTCXXCOMPILE) -c -o $@ $<
 
-libMove_la-Interp4Move.lo: Interp4Move.cpp
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libMove_la_CXXFLAGS) $(CXXFLAGS) -MT libMove_la-Interp4Move.lo -MD -MP -MF $(DEPDIR)/libMove_la-Interp4Move.Tpo -c -o libMove_la-Interp4Move.lo `test -f 'Interp4Move.cpp' || echo '$(srcdir)/'`Interp4Move.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libMove_la-Interp4Move.Tpo $(DEPDIR)/libMove_la-Interp4Move.Plo
-#	$(AM_V_CXX)source='Interp4Move.cpp' object='libMove_la-Interp4Move.lo' libtool=yes \
+libInterp4Move_la-Interp4Move.lo: Interp4Move.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Move_la_CXXFLAGS) $(CXXFLAGS) -MT libInterp4Move_la-Interp4Move.lo -MD -MP -MF $(DEPDIR)/libInterp4Move_la-Interp4Move.Tpo -c -o libInterp4Move_la-Interp4Move.lo `test -f 'Interp4Move.cpp' || echo '$(srcdir)/'`Interp4Move.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libInterp4Move_la-Interp4Move.Tpo $(DEPDIR)/libInterp4Move_la-Interp4Move.Plo
+#	$(AM_V_CXX)source='Interp4Move.cpp' object='libInterp4Move_la-Interp4Move.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libMove_la_CXXFLAGS) $(CXXFLAGS) -c -o libMove_la-Interp4Move.lo `test -f 'Interp4Move.cpp' || echo '$(srcdir)/'`Interp4Move.cpp
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Move_la_CXXFLAGS) $(CXXFLAGS) -c -o libInterp4Move_la-Interp4Move.lo `test -f 'Interp4Move.cpp' || echo '$(srcdir)/'`Interp4Move.cpp
 
-libPause_la-Interp4Pause.lo: Interp4Pause.cpp
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libPause_la_CXXFLAGS) $(CXXFLAGS) -MT libPause_la-Interp4Pause.lo -MD -MP -MF $(DEPDIR)/libPause_la-Interp4Pause.Tpo -c -o libPause_la-Interp4Pause.lo `test -f 'Interp4Pause.cpp' || echo '$(srcdir)/'`Interp4Pause.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libPause_la-Interp4Pause.Tpo $(DEPDIR)/libPause_la-Interp4Pause.Plo
-#	$(AM_V_CXX)source='Interp4Pause.cpp' object='libPause_la-Interp4Pause.lo' libtool=yes \
+libInterp4Pause_la-Interp4Pause.lo: Interp4Pause.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Pause_la_CXXFLAGS) $(CXXFLAGS) -MT libInterp4Pause_la-Interp4Pause.lo -MD -MP -MF $(DEPDIR)/libInterp4Pause_la-Interp4Pause.Tpo -c -o libInterp4Pause_la-Interp4Pause.lo `test -f 'Interp4Pause.cpp' || echo '$(srcdir)/'`Interp4Pause.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libInterp4Pause_la-Interp4Pause.Tpo $(DEPDIR)/libInterp4Pause_la-Interp4Pause.Plo
+#	$(AM_V_CXX)source='Interp4Pause.cpp' object='libInterp4Pause_la-Interp4Pause.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libPause_la_CXXFLAGS) $(CXXFLAGS) -c -o libPause_la-Interp4Pause.lo `test -f 'Interp4Pause.cpp' || echo '$(srcdir)/'`Interp4Pause.cpp
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Pause_la_CXXFLAGS) $(CXXFLAGS) -c -o libInterp4Pause_la-Interp4Pause.lo `test -f 'Interp4Pause.cpp' || echo '$(srcdir)/'`Interp4Pause.cpp
 
-libRotate_la-Interp4Rotate.lo: Interp4Rotate.cpp
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libRotate_la_CXXFLAGS) $(CXXFLAGS) -MT libRotate_la-Interp4Rotate.lo -MD -MP -MF $(DEPDIR)/libRotate_la-Interp4Rotate.Tpo -c -o libRotate_la-Interp4Rotate.lo `test -f 'Interp4Rotate.cpp' || echo '$(srcdir)/'`Interp4Rotate.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libRotate_la-Interp4Rotate.Tpo $(DEPDIR)/libRotate_la-Interp4Rotate.Plo
-#	$(AM_V_CXX)source='Interp4Rotate.cpp' object='libRotate_la-Interp4Rotate.lo' libtool=yes \
+libInterp4Rotate_la-Interp4Rotate.lo: Interp4Rotate.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Rotate_la_CXXFLAGS) $(CXXFLAGS) -MT libInterp4Rotate_la-Interp4Rotate.lo -MD -MP -MF $(DEPDIR)/libInterp4Rotate_la-Interp4Rotate.Tpo -c -o libInterp4Rotate_la-Interp4Rotate.lo `test -f 'Interp4Rotate.cpp' || echo '$(srcdir)/'`Interp4Rotate.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libInterp4Rotate_la-Interp4Rotate.Tpo $(DEPDIR)/libInterp4Rotate_la-Interp4Rotate.Plo
+#	$(AM_V_CXX)source='Interp4Rotate.cpp' object='libInterp4Rotate_la-Interp4Rotate.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libRotate_la_CXXFLAGS) $(CXXFLAGS) -c -o libRotate_la-Interp4Rotate.lo `test -f 'Interp4Rotate.cpp' || echo '$(srcdir)/'`Interp4Rotate.cpp
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Rotate_la_CXXFLAGS) $(CXXFLAGS) -c -o libInterp4Rotate_la-Interp4Rotate.lo `test -f 'Interp4Rotate.cpp' || echo '$(srcdir)/'`Interp4Rotate.cpp
 
-libSet_la-Interp4Set.lo: Interp4Set.cpp
-	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libSet_la_CXXFLAGS) $(CXXFLAGS) -MT libSet_la-Interp4Set.lo -MD -MP -MF $(DEPDIR)/libSet_la-Interp4Set.Tpo -c -o libSet_la-Interp4Set.lo `test -f 'Interp4Set.cpp' || echo '$(srcdir)/'`Interp4Set.cpp
-	$(AM_V_at)$(am__mv) $(DEPDIR)/libSet_la-Interp4Set.Tpo $(DEPDIR)/libSet_la-Interp4Set.Plo
-#	$(AM_V_CXX)source='Interp4Set.cpp' object='libSet_la-Interp4Set.lo' libtool=yes \
+libInterp4Set_la-Interp4Set.lo: Interp4Set.cpp
+	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Set_la_CXXFLAGS) $(CXXFLAGS) -MT libInterp4Set_la-Interp4Set.lo -MD -MP -MF $(DEPDIR)/libInterp4Set_la-Interp4Set.Tpo -c -o libInterp4Set_la-Interp4Set.lo `test -f 'Interp4Set.cpp' || echo '$(srcdir)/'`Interp4Set.cpp
+	$(AM_V_at)$(am__mv) $(DEPDIR)/libInterp4Set_la-Interp4Set.Tpo $(DEPDIR)/libInterp4Set_la-Interp4Set.Plo
+#	$(AM_V_CXX)source='Interp4Set.cpp' object='libInterp4Set_la-Interp4Set.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
-#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libSet_la_CXXFLAGS) $(CXXFLAGS) -c -o libSet_la-Interp4Set.lo `test -f 'Interp4Set.cpp' || echo '$(srcdir)/'`Interp4Set.cpp
+#	$(AM_V_CXX_no)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libInterp4Set_la_CXXFLAGS) $(CXXFLAGS) -c -o libInterp4Set_la-Interp4Set.lo `test -f 'Interp4Set.cpp' || echo '$(srcdir)/'`Interp4Set.cpp
 
 mostlyclean-libtool:
 	-rm -f *.lo
