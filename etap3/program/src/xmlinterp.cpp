@@ -148,7 +148,7 @@ void XMLInterp4Config::ProcessCubeAttrs(const xercesc::Attributes  &Attrs)
  }
  if (!IStrmXYZ.fail() && !IStrmRGB.fail()){
    Kostka->SetName(sValue_Name);
-   Kostka->SetPosition_m(desPos);
+   Kostka->SetSizeXYZ_m(desPos);
    shared_ptr<MobileObj> Kostka2 = make_shared<Cuboid>();
    Kostka2 = Kostka;
    Scena->Add(Kostka2);

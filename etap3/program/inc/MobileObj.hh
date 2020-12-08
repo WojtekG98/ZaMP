@@ -15,6 +15,10 @@
  * być nazwy pól. Obowiązkowe są jedynie nazwy metod.
  */
 
+/*!
+ * \brief Deklaracja instacji szablonu geom::Vector<int,3>
+ */
+ typedef geom::Vector<int,3>  VectorRGB;
 
 
 
@@ -57,6 +61,14 @@
 	* że współrzędne wyrażone są w metrach.
         */
        Vector3D  _Position_m;
+	
+       /*!
+        * \brief Rozmiar obiektu.
+	*
+	* Rozmiar obiektu. Przyjmuje się,
+	* że rozmiary wyrażone są w metrach.
+        */
+       Vector3D _SizeXYZ_m;
 
        /*!
         * \brief Nazwa obiektu, która go indentyfikuje.
@@ -67,6 +79,7 @@
        std::string  _Name;
 
      public:
+       VectorRGB color;
       /*!
        * \brief Udostępia wartość kąta \e roll.
        *
@@ -134,6 +147,25 @@
        */
        void SetPosition_m(const Vector3D &rPos_m) { _Position_m = rPos_m; }
 
+      /*!
+       * \brief Udostępnia wielkość obiektu w trybie tylko do odczytu.
+       *
+       * Udostępnia wielkość obiektu w trybie tylko do odczytu.
+       */
+       const Vector3D & GetSizeXYZ_m() const { return _SizeXYZ_m; }
+      /*!
+       * \brief Udostępnia wielkość obiektu w trybie modyfikacji.
+       *
+       * Udostępnia wielkości obiektu w trybie modyfikacji.
+       */
+       Vector3D & UseSizeXYZ_m() { return _SizeXYZ_m; }
+      /*!
+       * \brief Zmienia wielkość  obiektu.
+       *
+       * \param[in] rSize_m - Nowe wielkości XYZ obiektu. Przyjmuje się,
+       *                     że są one wyrażone w metrach.
+       */
+       void SetSizeXYZ_m(const Vector3D &rSize_m) { _SizeXYZ_m = rSize_m; }
 
       /*!
        * \brief Zmienia nazwę obiektu.

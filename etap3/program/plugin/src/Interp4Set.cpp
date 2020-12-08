@@ -58,6 +58,10 @@ bool Interp4Set::ExecCmd( MobileObj  *pMobObj,  AccessControl *pAccCtrl) const
   /*
    *  Tu trzeba napisać odpowiedni kod.
    */
+  
+  pAccCtrl->LockAccess();
+  pMobObj->SetPosition_m(_DesPosition_m);
+  pAccCtrl->UnlockAccess();
   return true;
 }
 

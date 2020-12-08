@@ -51,7 +51,7 @@ class ProgramInterpreter {
   	  sMesg += IlWyslanych;
   	}
   	if (IlWyslanych < 0) {
-  	  cerr << "*** Blad przeslania napisu." << endl;
+  	  cerr << "*** Blad przesylania napisu." << endl;
   	}
   	return 0;
   }
@@ -200,30 +200,74 @@ class ProgramInterpreter {
   	if (!wInterf->ReadParams(IStrm4Cmds)) return false;
   	cout << "---Parametry---" << endl;
   	wInterf->PrintCmd();
+	shared_ptr<MobileObj>MobObj;
+	AccessControl *pAccessControl = _Scn.get();
+	if(_Scn->Find("obj1", MobObj)){
+		MobileObj *pMobObj = MobObj.get();
+		wInterf->ExecCmd(pMobObj, pAccessControl);
+	}
+	else{
+		cout<< "\nNIE ZNALEZIONO obj1\n";
+		return false;
+	}
+  	if (!SendSceneState2Server()) return false;
   }
   return true;
  }
 /*!
  * Wysyła aktualną scene na serwer.
+ * \retval true - jeśli wysłanie zostało zrealizowane poprawnie,
+ * \retval false - w przeciwnym przypadku.
  */ 
  bool SendSceneState2Server(){
   if (OpenConnection())
   	cout << "\n POLACZENIE OTWARTE\n";
-  else
+  else{
 	cout << "\n NIE UDALO SIE OTWORZYC POLACZENIA \n";
+	return false;
+  }
   _Scn->LockAccess();
        
    //------- Przeglądanie tej kolekcji to uproszczony przykład
        
   Send("Clear\n"); // To jest konieczne, aby usunąć wcześniejsze obiekty.
   cout << "Clear\n";
-  //for (const MobileObj &rObj : _Scn->GetMobObjs().lower_bound()) {
   Set0MobileObjs::iterator it;
-  for (auto const& [key, val] : _Scn->GetMobObjs()){
-                                     // Ta instrukcja to tylko uproszczony przykład
-	cout << val << "  " << key << endl;//.GetName();
-  	//Send(val.GetName().c_str()); // Tu musi zostać wywołanie odpowiedniej
+  Set0MobileObjs Zbior = _Scn->GetMobObjs();
+  for ( it = Zbior.begin(); it != Zbior.end(); it++){
+ 	shared_ptr<MobileObj> Kostka = make_shared<MobileObj>();
+	Kostka = it->second;
+	std::ostringstream OStrm;
+	string napis_do_wyslania;
+	cout << "Cube   ";
+	OStrm << "Cube   ";
+	cout << Kostka->GetSizeXYZ_m()[0] << " ";
+	OStrm << Kostka->GetSizeXYZ_m()[0] << " ";
+	cout << Kostka->GetSizeXYZ_m()[1] << " ";
+	OStrm << Kostka->GetSizeXYZ_m()[1] << " ";
+	cout << Kostka->GetSizeXYZ_m()[2] << "   ";
+	OStrm << Kostka->GetSizeXYZ_m()[2] << "   ";
+	cout << Kostka->GetPosition_m()[0] << " ";
+	OStrm << Kostka->GetPosition_m()[0] << " ";
+	cout << Kostka->GetPosition_m()[1] << " ";
+	OStrm << Kostka->GetPosition_m()[1] << " ";
+	cout << Kostka->GetPosition_m()[2] << "   ";
+	OStrm << Kostka->GetPosition_m()[2] << "   ";
+	cout << Kostka->GetAng_Roll_deg() << " ";
+	OStrm << Kostka->GetAng_Roll_deg() << " ";
+	cout << Kostka->GetAng_Pitch_deg() << " ";
+	OStrm << Kostka->GetAng_Pitch_deg() << " ";
+	cout << Kostka->GetAng_Yaw_deg() << "   ";
+	OStrm << Kostka->GetAng_Yaw_deg() << "   ";
+	cout << Kostka->color[0] << " ";
+	OStrm << Kostka->color[0] << " ";
+	cout << Kostka->color[1] << " ";
+	OStrm << Kostka->color[1] << " ";
+	cout << Kostka->color[2] << "\n";
+	OStrm << Kostka->color[2] << "\n";
+	napis_do_wyslania = OStrm.str();// Tu musi zostać wywołanie odpowiedniej
                                       // metody/funkcji gerującej polecenia dla serwera.
+	Send(napis_do_wyslania.c_str());
   }
   Send("Display\n"); // To jest konieczne, aby zobaczyć zmiany
   cout << "Display\n";
